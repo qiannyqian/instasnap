@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <section class="post">
+      <div class="content">
+        <%= link_to "Back", request.referer || root_path %>
+        <div class="image-container">
+          <%= image_tag @photo.image.url, class: 'img-responsive' %>
+        </div>
+
+        <div class="caption-container text-center">
+          <h2><%= @photo.caption %></h2>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
