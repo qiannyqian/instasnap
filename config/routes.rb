@@ -4,5 +4,10 @@ Rails.application.routes.draw do
 
   resources :users, except: [:destroy]
   resource :sessions, only: [:create, :new, :destroy]
+  
+  resources :photos, only: [:new, :edit, :update] do
+    resources :likes
+    resources :comments
+  end
 
 end
