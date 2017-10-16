@@ -1,7 +1,7 @@
-<h2>All My Photos</h2>
+<h2>All InstaSnap Photos</h2>
 
-<%= Photo.all %>
-
-<%= Photo.all.each do |photo| %>
+<% Photo.all.each do |photo| %>
+  <%= image_tag photo.photo_url %>
   <%= photo.caption %>
+  <p>Posted by: <%= photo.user.username %></p>
 <% end %>

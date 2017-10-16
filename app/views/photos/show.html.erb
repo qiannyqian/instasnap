@@ -4,7 +4,7 @@
       <div class="content">
         <%= link_to "Back", request.referer || root_path %>
         <div class="image-container">
-
+          <%= image_tag @photo.photo_url %>
         </div>
 
         <div class="caption-container text-center">

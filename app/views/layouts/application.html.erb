@@ -12,7 +12,7 @@
     <div id="navbar">
       <%= link_to "Home", root_path, class: '' %>
       <% if current_user %>
-        <%= current_user.username %>
+        <%= link_to "#{current_user.username}", user_path(current_user) %>
         <%= link_to "New Photo", new_photo_path %>
         <%= link_to "Logout", "/sessions", class: 'button btn-info text-center', method: :delete %>
       <% else %>

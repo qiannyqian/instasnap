@@ -1,1 +1,8 @@
 <h3>User profile page</h3>
+
+<% @photos.each do |photo| %>
+  <%= image_tag photo.photo_url %>
+  <br>
+  <%= photo.caption %>
+  <br>
+<% end %>

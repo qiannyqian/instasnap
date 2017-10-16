@@ -12,6 +12,12 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = current_user
+    @photos = current_user.photos.all
+
+  end
+
   private
 
   def user_params

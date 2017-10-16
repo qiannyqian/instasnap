@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
   def all
     @photo = Photo.find_by(id: params[:id])
+    @user = User.find_by(:id)
   end
 
   def show
@@ -8,7 +9,6 @@ class PhotosController < ApplicationController
   end
 
   def create
-    byebug
     @photo = current_user.photos.create(photo_params)
 
     if @photo.persisted?
@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:user_id, :photo, :caption, :created_at, :updated_at)
+    params.require(:photo).permit(:user_id, :photo_url, :caption, :created_at, :updated_at)
   end
 
 end

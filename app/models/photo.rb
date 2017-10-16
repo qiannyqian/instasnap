@@ -1,5 +1,5 @@
 class Photo < ApplicationRecord
-  mount_uploader :image, ImageUploader
+  mount_uploader :photo_url, ImageUploader
 
   belongs_to :user
 
