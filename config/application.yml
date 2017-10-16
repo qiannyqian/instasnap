@@ -1,7 +1,3 @@
 # Add configuration values here, as shown below.
 #
 
-S3_BUCKET_NAME: "instasnap-next"
-AWS_ACCESS_KEY_ID: "AKIAJ3Y6VXF5MUZ4XA4Q"
-AWS_SECRET_ACCESS_KEY: "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"
-AWS_REGION: "us-west-2"
