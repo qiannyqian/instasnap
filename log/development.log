@@ -1163,3 +1163,924 @@ Completed 422 Unprocessable Entity in 39ms (ActiveRecord: 5.0ms)
 ActiveRecord::RecordInvalid (Validation failed: Users must exist):
   
 app/controllers/photos_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-16 09:35:47 +0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 578ms (Views: 555.8ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 09:39:38 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (50.8ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 108ms (Views: 98.1ms | ActiveRecord: 7.3ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 09:39:47 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b6tmH9U0Ym4vFLUc/v6+QbFdrdexZ0F2VBbsV1PxABKF9D4wJNxRu89CwqAR96B8q6LqVrZsVRWPim5l4jIE5A==", "photo"=>{"photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 50ms (ActiveRecord: 4.6ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Users must exist):
+  
+app/controllers/photos_controller.rb:12:in `create'
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 09:42:02 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ozxoKOKiRx/PQ6DBZvVdBtzOsJsWwTi/OHlpUlgqad8qdC+UGP6+MKqrd+5osIzY/6xVbIc6wKIVRy+ZGTjzrQ==", "photo"=>{"photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Users must exist):
+  
+app/controllers/photos_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-16 09:42:20 +0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 495ms (Views: 471.7ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 09:42:23 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 112ms (Views: 97.4ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 09:42:30 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rlLAV111hnssPY9SU5agsLIklRVaYPI7FmBGCRx9LKFEDZh4rJ21rsxr+O68n76NqNvSlF1r5ljN/MQ7rb4oVw==", "photo"=>{"photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 49ms (ActiveRecord: 8.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Users must exist):
+  
+app/controllers/photos_controller.rb:12:in `create'
+Started PUT "/__web_console/repl_sessions/b7b016ca11575c3352bdf10ea7bb00bf" for 127.0.0.1 at 2017-10-16 09:42:58 +0800
+Started PUT "/__web_console/repl_sessions/b7b016ca11575c3352bdf10ea7bb00bf" for 127.0.0.1 at 2017-10-16 09:42:59 +0800
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/b7b016ca11575c3352bdf10ea7bb00bf" for 127.0.0.1 at 2017-10-16 09:43:03 +0800
+Started PUT "/__web_console/repl_sessions/b7b016ca11575c3352bdf10ea7bb00bf" for 127.0.0.1 at 2017-10-16 09:43:04 +0800
+Started GET "/" for 127.0.0.1 at 2017-10-16 09:44:41 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 60.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 09:44:43 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 86ms (Views: 80.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 09:44:49 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uAEMLa0C0D2DDfvW7qnu6NrZnQeFO6EzDJ6ZPbc91NdSXlQCXOrj6GNbjGoBoPDVwCbahoIwtVDXAhsPBv7QIQ==", "photo"=>{"photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 33ms (ActiveRecord: 5.2ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Users must exist):
+  
+app/controllers/photos_controller.rb:12:in `create'
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 09:47:02 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yaJu151TTh+/Umkw7mCDqhZ049G0dSJoJnfFGee4ZDBA6ilrZw+3MNq6vh/gJVJ0NRYGJiWO2nULSYPSpqr+Qg==", "photo"=>{"photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 422 Unprocessable Entity in 36737ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Users must exist):
+  
+app/controllers/photos_controller.rb:13:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-16 09:48:24 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 63.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 09:48:26 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 52ms (Views: 49.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 09:48:41 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B/51zL1mNEQbDLuqEVlWE1WsCi3dyPG9VGmtLeOtbZ/toS3jTI4HkftazBb+UEguT1NNrNrD5d6P9S8fUm5paQ==", "photo"=>{"users_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 13684ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (uninitialized constant Photo::Users):
+  
+app/controllers/photos_controller.rb:13:in `create'
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:02:58 +0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 480ms (Views: 457.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 10:03:03 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (50.6ms)
+Completed 200 OK in 106ms (Views: 93.4ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:03:08 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a9cha+SrGAsehtEMYEDmCcvJB63Tl8I9udOCUjq3nc2BiHlEFUMr3v7QprCPSfg00TZALNSc1l5iTwBgi3SZOw==", "photo"=>{"users_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 6.6ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Photo.):
+  
+app/controllers/photos_controller.rb:11:in `create'
+Started PUT "/__web_console/repl_sessions/75f90b7b04e30f73dbd1fb71571ee5d2" for 127.0.0.1 at 2017-10-16 10:03:14 +0800
+Started PUT "/__web_console/repl_sessions/75f90b7b04e30f73dbd1fb71571ee5d2" for 127.0.0.1 at 2017-10-16 10:03:16 +0800
+Started PUT "/__web_console/repl_sessions/75f90b7b04e30f73dbd1fb71571ee5d2" for 127.0.0.1 at 2017-10-16 10:03:22 +0800
+Started PUT "/__web_console/repl_sessions/75f90b7b04e30f73dbd1fb71571ee5d2" for 127.0.0.1 at 2017-10-16 10:03:26 +0800
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started PUT "/__web_console/repl_sessions/75f90b7b04e30f73dbd1fb71571ee5d2" for 127.0.0.1 at 2017-10-16 10:03:40 +0800
+Started PUT "/__web_console/repl_sessions/75f90b7b04e30f73dbd1fb71571ee5d2" for 127.0.0.1 at 2017-10-16 10:03:52 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2914570794579847725)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeUsersIdInPhotos (20171016020822)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.6ms)[0m  [1m[35mALTER TABLE "photos" RENAME COLUMN "users_id" TO "user_id"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER INDEX "index_photos_on_users_id" RENAME TO "index_photos_on_user_id"[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171016020822"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2914570794579847725)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:09:19 +0800
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 469ms (Views: 450.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 10:09:23 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (64.9ms)
+Completed 200 OK in 114ms (Views: 97.2ms | ActiveRecord: 11.8ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:09:27 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B9PnpR8SciOjCQyU9weBpGvnCLBIhMtLXL/3XcjMqVvtjL+K7vpB9kNfeygYDp+ZcRhPMU+P3yiHI3VveQ+trQ==", "photo"=>{"users_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/photos_controller.rb:11:in `create'
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:09:44 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGHTV3jyGAEsc1DL3A8CZkGiCrb4ZD28pu/q2L/sZI85KZTrgq7hLkmbh+TSStO4YsDvQWmfxaGL0awT/v7+/Q==", "photo"=>{"users_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 6.8ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'users_id' for Photo.):
+  
+app/controllers/photos_controller.rb:11:in `create'
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:10:15 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sGHTV3jyGAEsc1DL3A8CZkGiCrb4ZD28pu/q2L/sZI85KZTrgq7hLkmbh+TSStO4YsDvQWmfxaGL0awT/v7+/Q==", "photo"=>{"users_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :users_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 151ms (Views: 69.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:10:33 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yXGDtJ+Q/bdQZijNArkd+tW1YxlVWQU7+fEasmu16gVAOcQIZcwEmDWO/+IM/Mwk9teG7sSi/SbUz1x5Kqdwdw==", "photo"=>{"users_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :users_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 53ms (Views: 42.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:11:03 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I64sZsOHsHAPxHIztFxxWU/emg5iTjZEyrV2oDgKUDuq5mvaOdtJX2ospRy6GaCHbLx/+fO1zlnnizBreRjKSQ==", "photo"=>{"users_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :users_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 65ms (Views: 54.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:11:31 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8TZMFDQogdfqOAdld9I+yyvh8kDPhxVFNB0BUtO3ezZ4fguoznR4+I/Q0Ep5l+8VCIMXt1587VgZI0eZkqXhRA==", "photo"=>{"user_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 103ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:12:05 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HsXEB1nU1ud5Og0GgX0DoYRqc6kq09V2KvJKr+Q0JIuXjYO7o4gvyBzS2imPONJ/pwiWXrsoLWsHzAxkpSa++Q==", "photo"=>{"user_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 132269ms (Views: 91.9ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:14:21 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"72t3xNSUTm/nHgBGRtO/+aelI+0TlpI1LAualuVpcZpmIzB4Lsi3QIL212lIlm4nhMfGGoJtaigBNdxdpHvr6A==", "photo"=>{"user_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 72558ms (Views: 38.1ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:15:42 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LHWBfmJRCCLwmcF9sP4AgHmOdmsEKH/zaVp8s7n1OF6lPcbCmA3xDZVxFlK+u9FeWuyTnJXTh+5EZDp4+OeiLA==", "photo"=>{"user_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4514ms (Views: 62.2ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:17:35 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"faUm8FhqAw5Qujo+VE/uT33hvA43GOZ8dBgepX41g/L07WFMojb6ITVS7RFaCj+RXoNZ+abjHmFZJlhuPycZgA==", "photo"=>{"user_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 38595ms (Views: 59.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:18:32 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ysXkGLq0nnvzi5JjA6La1GExzfe+OHaR87lU7hupUNSY1AsmLYrVoom+WaCS1q1cuYiwE8DGcdq8KOY+Xw/MQ==", "photo"=>{"user_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering photos/new.html.erb within layouts/application
+  Rendered photos/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 89390ms (Views: 60.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:20:05 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RJ+zmKKU15+UmT8QfzXoz22AF+DVPTk2lAcPMV6pgYHN1/QkWMgusPFx6D9xcDkRTuLyF0TGwSu5OUn6H7sb8w==", "photo"=>{"user_id"=>"1", "photo"=>"http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png", "caption"=>"Hello world!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "photos" ("user_id", "created_at", "updated_at", "caption", "photo") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["created_at", "2017-10-16 02:20:09.660719"], ["updated_at", "2017-10-16 02:20:09.660719"], ["caption", "Hello world!"], ["photo", "http://cumbrianrun.co.uk/wp-content/uploads/2014/02/default-placeholder-300x300.png"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/1
+Completed 302 Found in 4479ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-16 10:20:09 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    4:       <div class="content">
+    5:         <%= link_to "Back", request.referer || root_path %>
+    6:         <div class="image-container">
+    7:           <%= image_tag @photo.image.url, class: 'img-responsive' %>
+    8:         </div>
+    9: 
+   10:         <div class="caption-container text-center">
+  
+app/views/photos/show.html.erb:7:in `_app_views_photos_show_html_erb___2637822359253026883_70359971833900'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-16 10:23:01 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<String:0x007ffbe7b3f9a8>):
+    4:       <div class="content">
+    5:         <%= link_to "Back", request.referer || root_path %>
+    6:         <div class="image-container">
+    7:           <%= @photo.photo.url %>
+    8:         </div>
+    9: 
+   10:         <div class="caption-container text-center">
+  
+app/views/photos/show.html.erb:7:in `_app_views_photos_show_html_erb___2637822359253026883_70359949983800'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-16 10:23:09 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 57.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-16 10:23:19 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:23:34 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `all' for nil:NilClass):
+    1: <h2>All My Photos</h2>
+    2: 
+    3: <%= @photo.all %>
+  
+app/views/photos/index.html.erb:3:in `_app_views_photos_index_html_erb__1941735259055365919_70359943979880'
+Started PUT "/__web_console/repl_sessions/b0c199589ed239843bd5a4c1d85ab751" for 127.0.0.1 at 2017-10-16 10:23:49 +0800
+Started PUT "/__web_console/repl_sessions/b0c199589ed239843bd5a4c1d85ab751" for 127.0.0.1 at 2017-10-16 10:23:49 +0800
+Started PUT "/__web_console/repl_sessions/b0c199589ed239843bd5a4c1d85ab751" for 127.0.0.1 at 2017-10-16 10:23:53 +0800
+Started PUT "/__web_console/repl_sessions/b0c199589ed239843bd5a4c1d85ab751" for 127.0.0.1 at 2017-10-16 10:23:54 +0800
+Started PUT "/__web_console/repl_sessions/b0c199589ed239843bd5a4c1d85ab751" for 127.0.0.1 at 2017-10-16 10:23:58 +0800
+Started PUT "/__web_console/repl_sessions/b0c199589ed239843bd5a4c1d85ab751" for 127.0.0.1 at 2017-10-16 10:23:59 +0800
+Started PUT "/__web_console/repl_sessions/b0c199589ed239843bd5a4c1d85ab751" for 127.0.0.1 at 2017-10-16 10:23:59 +0800
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:24:15 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:25:42 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 52.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:25:45 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 49.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:28:19 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'bootstrap' with type 'text/css'
+Checked in these paths: 
+  /Users/huiqianliang/projects/instasnap/app/assets/config
+  /Users/huiqianliang/projects/instasnap/app/assets/images
+  /Users/huiqianliang/projects/instasnap/app/assets/javascripts
+  /Users/huiqianliang/projects/instasnap/app/assets/stylesheets
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/font-awesome-rails-4.7.0.2/app/assets/fonts
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/font-awesome-rails-4.7.0.2/app/assets/stylesheets
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/actioncable-5.1.4/lib/assets/compiled
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/actionview-5.1.4/lib/assets/compiled
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /Users/huiqianliang/projects/instasnap/node_modules
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.7/assets/fonts
+  /Users/huiqianliang/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.7/assets/images):
+    4:     <title>Instasnap</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.css:15
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___87979998936331798_70359970814680'
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:28:34 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 76.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:30:50 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 6254ms (Views: 6251.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:32:01 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3014ms (Views: 3009.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:33:58 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 3273ms (Views: 3269.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:34:34 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 68.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2017-10-16 10:34:37 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NXP622RmRt0SVuy9CDRAI6eLskI5GBvZEAHR4EsNC+q8O71nnjq/8ne+O5IGcZH9hOlXtajj48Q9P5crCh+RmA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:34:37 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3582ms (Views: 3578.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-16 10:34:44 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 61ms (Views: 58.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-16 10:35:23 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2909ms (Views: 2907.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-10-16 10:35:47 +0800
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HW+ftPbNPIxl+ZhNBqznj9fyOAm2t9asZ8k0hPLe/QeUJ9gIDJHFowART2II6TZR9JDd/idMLrFK93JPs8xndQ==", "user"=>{"email"=>"h.potter@hogwarts.com", "username"=>"harrypotter", "password"=>"[FILTERED]"}, "commit"=>"Sign me up!"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "h.potter@hogwarts.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "h.potter@hogwarts.com"], ["username", "harrypotter"], ["password_digest", "$2a$10$p84MWE30AbRtDMDbDLA1yu9OJh5skb9p2OWI7rUjZ5spnAIOlbUO2"], ["created_at", "2017-10-16 02:35:47.568205"], ["updated_at", "2017-10-16 02:35:47.568205"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 117ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:35:47 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 103ms (Views: 99.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:36:46 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 69.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:37:09 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2955ms (Views: 2951.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:38:46 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2937ms (Views: 2933.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:40:28 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2504ms (Views: 2501.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:40:43 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2584ms (Views: 2581.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:41:48 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 2621ms (Views: 2617.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:42:11 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 65.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:43:27 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3010ms (Views: 3007.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:44:10 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3201ms (Views: 3198.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:44:48 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 3641ms (Views: 3638.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 10:45:11 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 10:46:29 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 2657ms (Views: 2653.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:46:39 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 88ms (Views: 82.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2017-10-16 10:46:43 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4BYKoLYFkdR6vn9ddfV+rpQzHzPTp/u6c/WRrVbwMD9pXk0cTFlo+x9WqHJ7sK9wt1H6xEJcA6dey9dmF+KqTQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:46:43 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 62ms (Views: 59.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-16 10:48:14 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 3252ms (Views: 3249.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-16 10:48:17 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 123ms (Views: 119.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-16 10:48:48 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 71ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-16 10:48:50 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 80ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-16 10:49:37 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 3252ms (Views: 3249.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-16 10:49:45 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 106ms (Views: 99.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-16 10:49:50 +0800
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 88ms (Views: 82.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:49:53 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 80ms (Views: 76.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-16 10:49:56 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 132ms (Views: 125.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-10-16 10:50:05 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xsNcpHxJpszC2x1Mpru4ZKXHz9uQnyxUaXxKJXYnUXRxonX6u80zFd62BZyp/ccv/lB2Gtr5JMAikwAH0lSA==", "user"=>{"email"=>"hpotter@hogwarts.com", "password"=>"[FILTERED]"}, "commit"=>"Log me in!"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "hpotter@hogwarts.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 13ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-16 10:50:05 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 116ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-10-16 10:50:22 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/DnyPuraLGU6UbYNudxsVUVrRKAMRixjGMBUjCEBJlV1cbWCEIbVSl+5YSK3mb2LZgmhV5291H41/hJHYBO8Jw==", "user"=>{"email"=>"h.potter@hogwarts.com", "password"=>"[FILTERED]"}, "commit"=>"Log me in!"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "h.potter@hogwarts.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:50:23 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 10:50:26 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 70ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 10:50:57 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NcqgULpPHu5m1u/yP7dKckZyExK8LD680/WtqD+NcWfflfh/S6ctO4aAmE7QvlRPXI1Uk7snKt8IaS+ajk51kQ==", "photo"=>{"user_id"=>"2", "photo"=>"https://www.irishtimes.com/polopoly_fs/1.3170107.1501253408!/image/image.jpg_gen/derivatives/box_620_330/image.jpg", "caption"=>"#tbt to first year lol"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "photos" ("user_id", "created_at", "updated_at", "caption", "photo") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["created_at", "2017-10-16 02:51:06.708709"], ["updated_at", "2017-10-16 02:51:06.708709"], ["caption", "#tbt to first year lol"], ["photo", "https://www.irishtimes.com/polopoly_fs/1.3170107.1501253408!/image/image.jpg_gen/derivatives/box_620_330/image.jpg"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/2
+Completed 302 Found in 8946ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/photos/2" for 127.0.0.1 at 2017-10-16 10:51:06 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 64.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 10:51:11 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 83ms (Views: 78.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-16 10:51:17 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 63ms (Views: 60.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:51:30 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:52:14 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 82ms (Views: 78.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:54:52 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 65ms (Views: 61.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:55:52 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:56:01 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 87.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:57:37 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 85.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:58:05 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 67.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 10:58:32 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]

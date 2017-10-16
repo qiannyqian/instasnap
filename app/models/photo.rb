@@ -1,6 +1,8 @@
 class Photo < ApplicationRecord
-  belongs_to :users
-  
+  mount_uploader :image, ImageUploader
+
+  belongs_to :user
+
   has_many :likes
   has_many :comments
 end

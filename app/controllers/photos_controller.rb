@@ -8,9 +8,8 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
-    @photo.save!
     byebug
+    @photo = current_user.photos.create(photo_params)
 
     if @photo.persisted?
       redirect_to photo_path(@photo)
@@ -19,6 +18,7 @@ class PhotosController < ApplicationController
       render :new
       flash[:danger] = "Error posting photo"
     end
+
   end
 
   def update
@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
   private
 
   def photo_params
-    params.require(:photo).permit(:users_id, :photo, :caption)
+    params.require(:photo).permit(:user_id, :photo, :caption, :created_at, :updated_at)
   end
 
 end
