@@ -1,8 +1,18 @@
-<h3>User profile page</h3>
+<h3 class="profile-title">
+  <%= @user.username%>'s Profile
+</h3>
 
-<% @photos.each do |photo| %>
-  <%= image_tag photo.photo_url %>
-  <br>
-  <%= photo.caption %>
-  <br>
-<% end %>
+<div class="user-photos">
+
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.photo_url %>
+    <br>
+    <div class="caption">
+      <%= link_to "#{photo.caption}", class: 'caption' %>
+    </div>
+    <br>
+    <br>
+  <% end %>
+
+
+</div>
