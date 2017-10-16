@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Instasnap2</title>
+    <title>Instasnap</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,26 @@
   </head>
 
   <body>
+    <div id="navbar" class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <%= link_to "Instasnap", root_path, class: '' %>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user %>
+            <li><%= link_to "#{current_user.username}", user_path(current_user) %></li>
+            <li><%= link_to "New Photo", new_photo_path %></li>
+            <li><%= link_to "Logout", "/sessions", class: '', method: :delete %></li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_path, class: '' %></li>
+            <li><%= link_to "Log In", new_sessions_path, class: '' %></li>
+          <% end %>
+
+        </ul>
+      </div>
+
+    </div>
+
     <%= yield %>
   </body>
 </html>

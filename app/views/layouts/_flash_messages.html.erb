@@ -1,0 +1,14 @@
+<div id="flash-messages-container">
+  <% flash.each do |k,v| %>
+    <section class="flash-messages">
+      <div class="alert alert-<%=k%>">
+        <button type="button" id="close-flash" class="close" data-dismiss="alert">
+          &times;
+        </button>
+        <div class="message">
+          <%= display_message(v) %>
+        </div>
+      </div>
+    </section>
+  <% end %>
+</div>

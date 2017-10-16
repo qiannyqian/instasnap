@@ -1,0 +1,32 @@
+.main-page {
+  background-image: url('https://images.unsplash.com/photo-1482242248426-c4e9fe3a559a?dpr=1&auto=compress,format&fit=crop&w=1350&h=&q=80&cs=tinysrgb&crop=');
+  background-size: cover;
+  height: 100vh;
+}
+
+.header {
+  padding: 50px;
+  text-align: center;
+}
+
+.main-content {
+  padding: 30px;
+  text-align: center;
+}
+
+.signup-form {
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.all-photos {
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  border-radius: 5px;
+  width: 300px;
+}

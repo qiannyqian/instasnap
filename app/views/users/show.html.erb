@@ -1,0 +1,18 @@
+<h3 class="profile-title">
+  <%= @user.username%>'s Profile
+</h3>
+
+<div class="user-photos">
+
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.photo_url %>
+    <br>
+    <div class="caption">
+      <%= link_to "#{photo.caption}", class: 'caption' %>
+    </div>
+    <br>
+    <br>
+  <% end %>
+
+
+</div>

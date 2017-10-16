@@ -1,0 +1,11 @@
+<h2 class="header-title">Browse Instasnap</h2>
+
+<div class="photos-index">
+  <% Photo.all.each do |photo| %>
+    <%= image_tag photo.photo_url %>
+    <div class="photo-text">
+      <%= photo.caption %>
+      <p>Posted by: <%= photo.user.username %> </p>
+    </div>
+  <% end %>
+</div>

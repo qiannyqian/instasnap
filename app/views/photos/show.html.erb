@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <section class="photo">
+      <div class="content">
+        <div class="image-container">
+          <%= image_tag @photo.photo_url %>
+        </div>
+
+        <div class="caption-container">
+          <h4><%= @photo.caption %></h4>
+        </div>
+
+        <div class="back">
+          <%= link_to "Back", request.referer || root_path %>
+        </div>
+
+      </div>
+    </section>
+  </body>
+</html>
