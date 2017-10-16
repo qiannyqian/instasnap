@@ -1,3 +1,7 @@
 <h2>All My Photos</h2>
 
 <%= Photo.all %>
+
+<%= Photo.all.each do |photo| %>
+  <%= photo.caption %>
+<% end %>

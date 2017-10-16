@@ -2086,3 +2086,244 @@ Completed 200 OK in 85ms (Views: 81.4ms | ActiveRecord: 0.3ms)
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 11:52:04 +0800
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant CarrierWave::Storage::Fog):
+    1: <h2>All My Photos</h2>
+    2: 
+    3: <%= Photo.all %>
+  
+app/uploaders/image_uploader.rb:9:in `<class:ImageUploader>'
+app/uploaders/image_uploader.rb:1:in `<top (required)>'
+app/models/photo.rb:2:in `<class:Photo>'
+app/models/photo.rb:1:in `<top (required)>'
+app/views/photos/index.html.erb:3:in `_app_views_photos_index_html_erb___4578412833409435232_70197272928200'
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 11:54:50 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (uninitialized constant CarrierWave::Storage::Fog):
+    1: <h2>All My Photos</h2>
+    2: 
+    3: <%= Photo.all %>
+  
+app/uploaders/image_uploader.rb:9:in `<class:ImageUploader>'
+app/uploaders/image_uploader.rb:1:in `<top (required)>'
+app/models/photo.rb:2:in `<class:Photo>'
+app/models/photo.rb:1:in `<top (required)>'
+app/views/photos/index.html.erb:3:in `_app_views_photos_index_html_erb___4578412833409435232_70197269187660'
+Started GET "/" for 127.0.0.1 at 2017-10-16 11:55:09 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 890ms (Views: 857.4ms | ActiveRecord: 21.3ms)
+
+
+Started GET "/photos/new" for 127.0.0.1 at 2017-10-16 11:55:14 +0800
+Processing by PhotosController#new as HTML
+  Rendering photos/new.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered photos/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 143ms (Views: 130.5ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/photos" for 127.0.0.1 at 2017-10-16 11:55:33 +0800
+Processing by PhotosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"saMwDgMX0pPvodJgTJ3QuwximRC9nbURMWFbIgqNa7Jb/Ggh8v/hRg/3pdyjlM6GFp3ekbqWoXLq/dkQu05vRA==", "photo"=>{"user_id"=>"2", "photo"=>#<ActionDispatch::Http::UploadedFile:0x007f831643fa08 @tempfile=#<Tempfile:/var/folders/3s/4m0ccr411sb8293573wwmxy80000gn/T/RackMultipart20171016-6471-nvyorx.jpg>, @original_filename="webdev2.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"photo[photo]\"; filename=\"webdev2.jpg\"\r\nContent-Type: image/jpeg\r\n">, "caption"=>"My friends at NEXT!"}, "commit"=>"Post new photo"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[32mINSERT INTO "photos" ("user_id", "created_at", "updated_at", "caption", "photo") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["created_at", "2017-10-16 03:55:41.129334"], ["updated_at", "2017-10-16 03:55:41.129334"], ["caption", "My friends at NEXT!"], ["photo", "#<ActionDispatch::Http::UploadedFile:0x007f831643fa08>"]]
+  [1m[35m (8.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/3
+Completed 302 Found in 7881ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/photos/3" for 127.0.0.1 at 2017-10-16 11:55:41 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Photo:0x007f831b20ed60>):
+     6:         <div class="image-container">
+     7:           <%= image_tag @photo.image_url.to_s %>
+     8: 
+     9:           <% @photo.each do |photo| %>
+    10:             <%= image_tag photo.image.url %>
+    11:             <%= photo.caption %>
+    12:           <% end %>
+  
+app/views/photos/show.html.erb:9:in `_app_views_photos_show_html_erb___1793299242378074907_70100536287460'
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/photos/3" for 127.0.0.1 at 2017-10-16 11:56:35 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (20.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 92.3ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/photos/3" for 127.0.0.1 at 2017-10-16 11:56:49 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+    4:       <div class="content">
+    5:         <%= link_to "Back", request.referer || root_path %>
+    6:         <div class="image-container">
+    7:           <%= image_tag @photo.image_url %>
+    8: 
+    9:         </div>
+   10: 
+  
+app/views/photos/show.html.erb:7:in `_app_views_photos_show_html_erb___1793299242378074907_70100561692800'
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 11:57:10 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  Rendered photos/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 65.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 11:59:08 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (12.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (The asset "" is not present in the asset pipeline.):
+    3: <%= Photo.all %>
+    4: 
+    5: <%= Photo.all.each do |photo| %>
+    6:   <%= image_tag photo.photo %>
+    7:   <%= photo.caption %>
+    8: <% end %>
+  
+app/views/photos/index.html.erb:6:in `block in _app_views_photos_index_html_erb__3674526038120139042_70100563590120'
+app/views/photos/index.html.erb:5:in `_app_views_photos_index_html_erb__3674526038120139042_70100563590120'
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:16 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:17 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:17 +0800
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:18 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:25 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:25 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:28 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:29 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:31 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:31 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:35 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:41 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 11:59:42 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:02 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:09 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:10 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:26 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:33 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:34 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:34 +0800
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:39 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:40 +0800
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:44 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:48 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:49 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:00:50 +0800
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:01:03 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:02:09 +0800
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:02:09 +0800
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started PUT "/__web_console/repl_sessions/832b90a536f54564100e10d553652e72" for 127.0.0.1 at 2017-10-16 12:02:17 +0800
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 12:03:06 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 89ms (Views: 84.6ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2914570794579847725)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenamePhotoToPhotourl (20171016040420)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "photos" RENAME COLUMN "photo" TO "photo_url"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171016040420"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2914570794579847725)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-16 12:05:26 +0800
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 91.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/photos/2" for 127.0.0.1 at 2017-10-16 12:05:32 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPhoto Load (6.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 68.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/photos/3" for 127.0.0.1 at 2017-10-16 12:05:35 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 67ms (Views: 62.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-16 12:05:40 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.8ms)
+
+

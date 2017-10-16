@@ -4,12 +4,6 @@
       <div class="content">
         <%= link_to "Back", request.referer || root_path %>
         <div class="image-container">
-          <%= image_tag @photo.image.url, class: 'img-responsive' %>
-
-          <% @photo.each do |photo| %>
-            <%= image_tag photo.image.url %>
-            <%= photo.caption %>
-          <% end %>
 
         </div>
 
