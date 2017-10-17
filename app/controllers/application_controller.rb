@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+
   def authenticate!
     unless current_user
       redirect_to root_path
@@ -11,5 +12,13 @@ class ApplicationController < ActionController::Base
     return unless cookies.signed[:id]
     @current_user ||= User.find_by(id: cookies.signed[:id])
   end
-  helper_method :current_user 
+
+  helper_method :current_user
+
+  def logged_in
+    @current_user.present? == true
+  end
+
+  helper_method :logged_in
+
 end
