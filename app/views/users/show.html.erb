@@ -1,5 +1,13 @@
 <h3 class="profile-title">
   <%= @user.username%>'s Profile
+
+  <% if @user.boost != true %>
+    <i class="fa fa-user-circle" aria-hidden="true"></i>
+  <% else %>
+    <i class="fa fa-user-circle" aria-hidden="true"></i>
+    <i class="fa fa-star" aria-hidden="true"></i>
+  <% end %>
+
 </h3>
 
 <div class="user-photos">

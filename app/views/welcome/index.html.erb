@@ -17,6 +17,15 @@
       <%= link_to "All Photos", photos_path %>
     </div>
 
-    
+    <% if current_user%>
+    <div class="buy-boost">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <%= link_to "Buy Boost", braintree_new_path %>
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <p>If you're looking to boost your profile, you can buy lifetime access for only $10!</p>
+    </div>
+    <% end %>
+
+
   </div>
 </div>
