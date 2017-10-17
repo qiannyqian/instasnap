@@ -2,10 +2,11 @@
 
 <div class="photos-index">
   <% Photo.all.each do |photo| %>
-    <%= image_tag photo.photo_url %>
+    <%= image_tag photo.photo_url, class: 'index-photo' %>
     <div class="photo-text">
-      <%= photo.caption %>
-      <p>Posted by: <%= photo.user.username %> </p>
+      <%= link_to "#{photo.caption}", photo_path(photo.id), class: 'caption' %>
+      <p>Posted by: <%= link_to "#{photo.user.username}", user_path(photo.user.id) %></p>
     </div>
+    <hr>
   <% end %>
 </div>

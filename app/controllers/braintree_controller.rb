@@ -15,6 +15,7 @@ class BraintreeController < ApplicationController
      )
 
     if result.success?
+      current_user.update_attribute(:boost, true)
       redirect_to :root, :flash => { :success => "Transaction successful!" }
     else
       redirect_to :root, :flash => { :error => "Transaction failed. Please try again." }
