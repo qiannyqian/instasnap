@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+
   def all
     @photo = Photo.find_by(id: params[:id])
     @user = User.find_by(:id)
