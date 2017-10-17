@@ -13,9 +13,19 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
-    @photos = current_user.photos.all
+    @user = User.find(params[:id])
 
+    @photos = @user.photos.all
+
+  end
+
+  def index
+    @users = User.all
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+       @users = User.all.order('created_at DESC')
+     end
   end
 
   private
