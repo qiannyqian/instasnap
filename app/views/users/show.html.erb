@@ -8,7 +8,7 @@
     <%= image_tag photo.photo_url %>
     <br>
     <div class="caption">
-      <%= link_to "#{photo.caption}", class: 'caption' %>
+      <%= link_to "#{photo.caption}", photo_path(photo.id), class: 'caption' %>
     </div>
     <br>
     <br>

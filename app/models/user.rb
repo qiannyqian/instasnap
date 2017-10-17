@@ -24,4 +24,8 @@ class User < ApplicationRecord
     x = self.authentications.find_by(provider: 'facebook')
     return x.token unless x.nil?
   end
+
+  def self.search(search)
+    where("username ILIKE ?", "%#{search}%") 
+  end
 end

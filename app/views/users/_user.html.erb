@@ -1,0 +1,4 @@
+
+<h3>Search results</h3>
+
+<%= link_to "#{@users.find_by(id: @users).username}", user_path(@users.find_by(id: @users)) %>
