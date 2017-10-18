@@ -1,3 +1,4 @@
 <!-- Liking a photo -->
-<%= link_to "Like", photo_likes_path(@photo), method: :post %>
+<%= link_to "Like", photo_likes_path(@photo), method: :post, remote: true %>
+<%= link_to "Unlike", photo_like_path(@photo), method: :delete, remote: true %>
 <!-- Liking a photo -->

@@ -8,8 +8,9 @@
 
         <div class="caption-container">
           <%= render partial: 'likes/create' %>
-
-          <p><%= @photo.likes.count%> likes</p>
+          <div id="likes-counter-container">
+            <%= render partial: 'likes/counter', locals: { photo: @photo } %>
+          </div>
           <h4><%= @photo.caption %></h4>
         </div>
 
