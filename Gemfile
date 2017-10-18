@@ -38,6 +38,7 @@ gem 'fog'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'braintree'
+gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

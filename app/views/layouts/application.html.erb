@@ -27,13 +27,11 @@
 
         </ul>
       </div>
-
     </div>
-    <% flash.each do |key, value| %>
-        <div class="<%= flash_class(key) %>">
-              <%= value %>
-        </div>
-    <% end %>
+
+    <div id="flash-messages-container">
+      <%= render partial: 'layouts/flash_messages' %>
+    </div>
 
     <%= yield %>
   </body>

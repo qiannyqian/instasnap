@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017085921) do
+ActiveRecord::Schema.define(version: 20171018041232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,23 +26,23 @@ ActiveRecord::Schema.define(version: 20171017085921) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "photos_id"
+    t.bigint "user_id"
+    t.bigint "photo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "comment"
-    t.index ["photos_id"], name: "index_comments_on_photos_id"
-    t.index ["users_id"], name: "index_comments_on_users_id"
+    t.index ["photo_id"], name: "index_comments_on_photo_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
-    t.bigint "users_id"
-    t.bigint "photos_id"
+    t.bigint "user_id"
+    t.bigint "photo_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "likes"
-    t.index ["photos_id"], name: "index_likes_on_photos_id"
-    t.index ["users_id"], name: "index_likes_on_users_id"
+    t.index ["photo_id"], name: "index_likes_on_photo_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
   create_table "photos", force: :cascade do |t|

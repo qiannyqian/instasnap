@@ -7,8 +7,13 @@
         </div>
 
         <div class="caption-container">
+          <%= render partial: 'likes/create' %>
+          <div id="likes-counter-container">
+            <%= render partial: 'likes/counter', locals: { photo: @photo } %>
+          </div>
           <h4><%= @photo.caption %></h4>
         </div>
+
 
         <div class="back">
           <%= link_to "Back", photos_path %>
