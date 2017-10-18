@@ -25,7 +25,9 @@ class User < ApplicationRecord
     return x.token unless x.nil?
   end
 
+  #Search Users
   def self.search(search)
-    where("username ILIKE ?", "%#{search}%") 
+    where("username ILIKE ?", "%#{search}%")
   end
+
 end

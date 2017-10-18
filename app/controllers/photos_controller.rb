@@ -1,4 +1,5 @@
 class PhotosController < ApplicationController
+  before_action :authenticate!
 
   def all
     @photo = Photo.find_by(id: params[:id])

@@ -7,8 +7,12 @@
         </div>
 
         <div class="caption-container">
+          <%= render partial: 'likes/create' %>
+
+          <p><%= @photo.likes.count%> likes</p>
           <h4><%= @photo.caption %></h4>
         </div>
+
 
         <div class="back">
           <%= link_to "Back", photos_path %>

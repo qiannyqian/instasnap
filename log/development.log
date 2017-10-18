@@ -10544,3 +10544,1503 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 82ms (Views: 77.4ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-17 22:40:28 +0800
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 1141ms (Views: 1126.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-10-17 22:40:33 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-10-17 22:40:34 +0800
+Started GET "/auth/facebook/callback?code=AQCq08OMhcQ_QVME1NmHOtEkGDIycOMm-GmNDZXc6UN0gLb4pR5kLpVcNi1g3UZHG05icEpR5vnVlq3N3QpHZflE9gWmIpAwsrwOtK8b5XR6PgcgYRfAhaRLCULSHo9B3YN8PzGKzTRr-DY_wdZL_b9PQoDGHedb3uEaTBCN58eHzEp3oqif65dd3NV5I64b6hbft-CYK-5joNvf8Yz51mQev0HMilf7hAFeMyWv5RTBQkvWbwLwgaOLCrDfDU90AMIDoS9DlgExe11WwY4Nw4jfozjP_LDYh0YT_4gYELPgY62HBsCUs9LNo3w41j_9A1ON627g1ownOckOwlAh_PRZ&state=8a53c15ce05c866c6426d404b70dddaa5ef0dde39aff3fb0" for 127.0.0.1 at 2017-10-17 22:40:34 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQCq08OMhcQ_QVME1NmHOtEkGDIycOMm-GmNDZXc6UN0gLb4pR5kLpVcNi1g3UZHG05icEpR5vnVlq3N3QpHZflE9gWmIpAwsrwOtK8b5XR6PgcgYRfAhaRLCULSHo9B3YN8PzGKzTRr-DY_wdZL_b9PQoDGHedb3uEaTBCN58eHzEp3oqif65dd3NV5I64b6hbft-CYK-5joNvf8Yz51mQev0HMilf7hAFeMyWv5RTBQkvWbwLwgaOLCrDfDU90AMIDoS9DlgExe11WwY4Nw4jfozjP_LDYh0YT_4gYELPgY62HBsCUs9LNo3w41j_9A1ON627g1ownOckOwlAh_PRZ", "state"=>"8a53c15ce05c866c6426d404b70dddaa5ef0dde39aff3fb0", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (7.3ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "1713704285306962"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAAB0TjkfbZAoBAEAivwOP4RZAOqOmdB8qofgZA61R2qZBOBBuUuHLZC3aI0E6J0ldlePcqRIVsBVynGgEfGDV4JEFzzXcoI0sLhA6ZCZB7eYTtmEDQd5wiXeHRh1w7vf4DTtZCdwXw0MMDyZBLehZAHR3ZAzyisUEDtZCz8NH6n9jvPifgZDZD"], ["updated_at", "2017-10-17 14:40:35.214461"], ["id", 1]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 113ms (ActiveRecord: 31.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-17 22:40:35 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (43.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 113.2ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-10-17 22:40:37 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 122ms (Views: 79.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 22:40:40 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 98ms (Views: 91.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/braintree/new" for 127.0.0.1 at 2017-10-17 22:40:42 +0800
+Processing by BraintreeController#new as HTML
+  Rendering braintree/new.html.erb within layouts/application
+  Rendered braintree/new.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 1389ms (Views: 95.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/braintree/new" for 127.0.0.1 at 2017-10-17 22:40:45 +0800
+Processing by BraintreeController#new as HTML
+  Rendering braintree/new.html.erb within layouts/application
+  Rendered braintree/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 1066ms (Views: 83.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/braintree/checkout" for 127.0.0.1 at 2017-10-17 22:41:00 +0800
+Processing by BraintreeController#checkout as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GPTOb98Aa81Sn/vtO6nd/tLvYvGrdtHXq1+LcanihHhSYREEtw/2BhKFQqROn3lK/YdMmw7zeE6AwdKks6NZmQ==", "checkout_form"=>{"payment_method_nonce"=>"33fda7e5-ed24-046f-7a80-33c04a23e34a"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "boost" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["boost", "t"], ["updated_at", "2017-10-17 14:41:01.508450"], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1449ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 22:41:01 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 79ms (Views: 76.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-10-17 22:41:04 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 120ms (Views: 110.8ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2017-10-17 22:41:07 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZuDEaq39tXRK/rVXVtejxGlw2exohBklKx7VkDZF9fUsdRsBxfIovwrkDB4j4QdwRhj3hs0BsLwAgIxFLAQoFA=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-17 22:41:07 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 83ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-10-17 22:41:13 +0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY created_at DESC[0m
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IN (SELECT "users"."id" FROM "users" ORDER BY created_at DESC) ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IN (SELECT "users"."id" FROM "users" ORDER BY created_at DESC) ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered users/_user.html.erb (18.5ms)
+  Rendered users/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 122ms (Views: 101.0ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&search=hui+qian&commit=Search" for 127.0.0.1 at 2017-10-17 22:41:19 +0800
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"hui qian", "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username ILIKE '%hui qian%') ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username ILIKE '%hui qian%') AND "users"."id" IN (SELECT "users"."id" FROM "users" WHERE (username ILIKE '%hui qian%') ORDER BY created_at DESC) ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username ILIKE '%hui qian%') AND "users"."id" IN (SELECT "users"."id" FROM "users" WHERE (username ILIKE '%hui qian%') ORDER BY created_at DESC) ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered users/_user.html.erb (7.1ms)
+  Rendered users/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 141ms (Views: 127.8ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-10-17 22:41:21 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (29.5ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 177ms (Views: 126.7ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&search=potter&commit=Search" for 127.0.0.1 at 2017-10-17 22:41:26 +0800
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"potter", "commit"=>"Search"}
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (username ILIKE '%potter%') ORDER BY created_at DESC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username ILIKE '%potter%') AND "users"."id" IN (SELECT "users"."id" FROM "users" WHERE (username ILIKE '%potter%') ORDER BY created_at DESC) ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE (username ILIKE '%potter%') AND "users"."id" IN (SELECT "users"."id" FROM "users" WHERE (username ILIKE '%potter%') ORDER BY created_at DESC) ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered users/_user.html.erb (3.9ms)
+  Rendered users/index.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 97ms (Views: 91.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-10-17 22:41:27 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (26.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 137ms (Views: 101.4ms | ActiveRecord: 26.7ms)
+
+
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2914570794579847725)[0m
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnName (20171018041018)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "likes" RENAME COLUMN "users_id" TO "user_id"[0m
+  [1m[35m (19.2ms)[0m  [1m[35mALTER INDEX "index_likes_on_users_id" RENAME TO "index_likes_on_user_id"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "likes" RENAME COLUMN "photos_id" TO "photo_id"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER INDEX "index_likes_on_photos_id" RENAME TO "index_likes_on_photo_id"[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171018041018"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2914570794579847725)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2914570794579847725)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeColumnNameOnComments (20171018041232)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "comments" RENAME COLUMN "users_id" TO "user_id"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER INDEX "index_comments_on_users_id" RENAME TO "index_comments_on_user_id"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "comments" RENAME COLUMN "photos_id" TO "photo_id"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER INDEX "index_comments_on_photos_id" RENAME TO "index_comments_on_photo_id"[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20171018041232"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2914570794579847725)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" ORDER BY "photos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (15.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 1], ["photo_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "photo_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["photo_id", 1], ["created_at", "2017-10-18 04:14:04.514593"], ["updated_at", "2017-10-18 04:14:04.514593"]]
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."photo_id" = $1 AND "likes"."user_id" = $2 ORDER BY "likes"."id" ASC LIMIT $3[0m  [["photo_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+Started GET "/" for 127.0.0.1 at 2017-10-18 12:22:43 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 691ms (Views: 679.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 12:22:46 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (126.6ms)
+Completed 200 OK in 220ms (Views: 193.9ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:22:49 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 130ms (Views: 111.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 12:22:53 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 109ms (Views: 96.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 12:23:15 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 106ms (Views: 96.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:28:00 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (17.1ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 8.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"likes", :id=>"1"}, missing required keys: [:photo_id]):
+    10:           <p><%= @photo.likes.count%> likes</p>
+    11: 
+    12:           <!-- Liking a photo -->
+    13:           <%= form_for(:likes, url: photo_likes_path, method: :post) do |f| %>
+    14:             <div class="form-group">
+    15:               <%= f.hidden_field :user_id, value: current_user.id %>
+    16:             </div>
+  
+app/views/photos/show.html.erb:13:in `_app_views_photos_show_html_erb__3903431296470908677_70212770238100'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:29:27 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"likes", :id=>"1"}, missing required keys: [:photo_id]):
+    10:           <p><%= @photo.likes.count%> likes</p>
+    11: 
+    12:           <!-- Liking a photo -->
+    13:           <%= form_for(:likes, url: photo_likes_path, method: :post) do |f| %>
+    14:             <div class="form-group">
+    15:               <%= f.hidden_field :user_id, value: current_user.id %>
+    16:               <%= f.hidden_field :photo_id, value: photo_id %>
+  
+app/views/photos/show.html.erb:13:in `_app_views_photos_show_html_erb__3903431296470908677_70212800743500'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:32:14 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered likes/_create.html.erb (3.3ms)
+  Rendered photos/show.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"likes", :id=>"1"}, missing required keys: [:photo_id]):
+    1: <!-- Liking a photo -->
+    2: <%= form_for(:likes, url: photo_likes_path, method: :post) do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.hidden_field :user_id, value: current_user.id %>
+    5:     <%= f.hidden_field :photo_id, value: photo_id %>
+  
+app/views/likes/_create.html.erb:2:in `_app_views_likes__create_html_erb___3035829861763598640_70212807218780'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb__3903431296470908677_70212807263620'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:32:58 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered likes/_create.html.erb (8.6ms)
+  Rendered photos/show.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"likes", :id=>"1"}, missing required keys: [:photo_id]):
+    1: <!-- Liking a photo -->
+    2: <%= form_for(:likes, url: photo_like_path, method: :put) do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.hidden_field :user_id, value: current_user.id %>
+    5:     <%= f.hidden_field :photo_id, value: photo_id %>
+  
+app/views/likes/_create.html.erb:2:in `_app_views_likes__create_html_erb___3035829861763598640_70212768819400'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb__3903431296470908677_70212773859660'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:34:23 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered likes/_create.html.erb (369.8ms)
+  Rendered photos/show.html.erb within layouts/application (374.5ms)
+Completed 500 Internal Server Error in 386ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `photos_like_path' for #<#<Class:0x007fb75e751490>:0x007fb758261670>
+Did you mean?  photo_like_path
+               photo_likes_path):
+    1: <!-- Liking a photo -->
+    2: <%= form_for(:likes, url: photos_like_path, method: :post) do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.hidden_field :user_id, value: @photo.user_id %>
+    5:     <%= f.hidden_field :photo_id, value: photo_id %>
+  
+app/views/likes/_create.html.erb:2:in `_app_views_likes__create_html_erb___3035829861763598640_70212727308000'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb__3903431296470908677_70212717336040'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:34:36 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered likes/_create.html.erb (15.1ms)
+  Rendered photos/show.html.erb within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"likes", :id=>"1"}, missing required keys: [:photo_id]):
+    1: <!-- Liking a photo -->
+    2: <%= form_for(:likes, url: photo_likes_path, method: :post) do |f| %>
+    3:   <div class="form-group">
+    4:     <%= f.hidden_field :user_id, value: @photo.user_id %>
+    5:     <%= f.hidden_field :photo_id, value: photo_id %>
+  
+app/views/likes/_create.html.erb:2:in `_app_views_likes__create_html_erb___3035829861763598640_70212751606400'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb__3903431296470908677_70212756059440'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:45:08 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered likes/_create.html.erb (0.4ms)
+  Rendered photos/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 115ms (Views: 109.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:45:21 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered likes/_create.html.erb (0.6ms)
+  Rendered photos/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 104ms (Views: 98.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:45:29 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered likes/_create.html.erb (0.8ms)
+  Rendered photos/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 114ms (Views: 109.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 12:45:42 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.4ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 91ms (Views: 86.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:36:07 +0800
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.3ms)
+  Rendered photos/show.html.erb within layouts/application (437.6ms)
+Completed 500 Internal Server Error in 511ms (ActiveRecord: 5.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `photo' for #<#<Class:0x007f850af9c900>:0x007f850b8e3bf8>
+Did you mean?  @photo):
+     8: 
+     9:         <div class="caption-container">
+    10:           <%= render partial: 'likes/create' %>
+    11:           <%= render partial: 'likes/button', locals: { photos: photo } %>
+    12: 
+    13:           <p><%= @photo.likes.count%> likes</p>
+    14:           <h4><%= @photo.caption %></h4>
+  
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb___3273652260690186649_70104695763120'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:36:24 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (2.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.6ms)
+  Rendered likes/_button.html.erb (422.7ms)
+  Rendered photos/show.html.erb within layouts/application (433.8ms)
+Completed 500 Internal Server Error in 502ms (ActiveRecord: 18.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `photo' for #<#<Class:0x007f850af9c900>:0x007f85103c3510>
+Did you mean?  photos
+               @photo):
+    1: <% if current_user.like?(photo) %>
+    2:   <%= button_to "Unlike", unlike_path(photo_id: photo.id), remote: true, method: :delete  %>
+    3: <% else %>
+    4:   <%= button_to "Like", like_path(photo_id: photo.id), remote: true  %>
+  
+app/views/likes/_button.html.erb:1:in `_app_views_likes__button_html_erb__1186145603867964277_70104744826580'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb___3273652260690186649_70104739890300'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:36:41 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.3ms)
+  Rendered likes/_button.html.erb (5.9ms)
+  Rendered photos/show.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `like?' for nil:NilClass):
+    1: <% if current_user.like?(@photo) %>
+    2:   <%= button_to "Unlike", unlike_path(photo_id: photo.id), remote: true, method: :delete  %>
+    3: <% else %>
+    4:   <%= button_to "Like", like_path(photo_id: photo.id), remote: true  %>
+  
+app/views/likes/_button.html.erb:1:in `_app_views_likes__button_html_erb__1186145603867964277_70104699896780'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb___3273652260690186649_70104699894000'
+Started PUT "/__web_console/repl_sessions/204ba74e29c053ce30aec1426d1ffaca" for 127.0.0.1 at 2017-10-18 13:36:50 +0800
+Started PUT "/__web_console/repl_sessions/204ba74e29c053ce30aec1426d1ffaca" for 127.0.0.1 at 2017-10-18 13:36:50 +0800
+Started PUT "/__web_console/repl_sessions/204ba74e29c053ce30aec1426d1ffaca" for 127.0.0.1 at 2017-10-18 13:36:53 +0800
+Started PUT "/__web_console/repl_sessions/204ba74e29c053ce30aec1426d1ffaca" for 127.0.0.1 at 2017-10-18 13:36:58 +0800
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:37:47 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.4ms)
+  Rendered likes/_button.html.erb (5.3ms)
+  Rendered photos/show.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `like?' for nil:NilClass):
+    1: <% if current_user.like?(@photo) %>
+    2:   <%= button_to "Unlike", unlike_path(photo_id: photo.id), remote: true, method: :delete  %>
+    3: <% else %>
+    4:   <%= button_to "Like", like_path(photo_id: photo.id), remote: true  %>
+  
+app/views/likes/_button.html.erb:1:in `_app_views_likes__button_html_erb__1186145603867964277_70104742722060'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb___3273652260690186649_70104738724900'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:38:07 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.0ms)
+  Rendered likes/_button.html.erb (396.8ms)
+  Rendered photos/show.html.erb within layouts/application (405.5ms)
+Completed 500 Internal Server Error in 420ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `photo' for #<#<Class:0x007f851018eec0>:0x007f850b3dc268>
+Did you mean?  photos
+               @photo):
+    1: <% if current_user.like?(photo) %>
+    2:   <%= button_to "Unlike", unlike_path(photo_id: photo.id), remote: true, method: :delete  %>
+    3: <% else %>
+    4:   <%= button_to "Like", like_path(photo_id: photo.id), remote: true  %>
+  
+app/views/likes/_button.html.erb:1:in `_app_views_likes__button_html_erb__1186145603867964277_70104693928440'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb___3273652260690186649_70104697992620'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:38:26 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.4ms)
+  Rendered likes/_button.html.erb (5.8ms)
+  Rendered photos/show.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `like?' for nil:NilClass):
+    1: <% if current_user.like?(@photo) %>
+    2:   <%= button_to "Unlike", unlike_path(photo_id: photo.id), remote: true, method: :delete  %>
+    3: <% else %>
+    4:   <%= button_to "Like", like_path(photo_id: photo.id), remote: true  %>
+  
+app/views/likes/_button.html.erb:1:in `_app_views_likes__button_html_erb__1186145603867964277_70104695005520'
+app/views/photos/show.html.erb:11:in `_app_views_photos_show_html_erb___3273652260690186649_70104695138060'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:39:43 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.4ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 4469ms (Views: 4445.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:42:47 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.0ms)
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 110ms (Views: 102.5ms | ActiveRecord: 2.5ms)
+
+
+Started PUT "/photos/1/likes/1" for 127.0.0.1 at 2017-10-18 13:42:51 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for LikesController):
+  
+actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+omniauth (1.7.1) lib/omniauth/strategy.rb:190:in `call!'
+omniauth (1.7.1) lib/omniauth/strategy.rb:168:in `call'
+omniauth (1.7.1) lib/omniauth/builder.rb:63:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:43:39 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 145ms (Views: 109.9ms | ActiveRecord: 7.0ms)
+
+
+Started PUT "/photos/1/likes/1" for 127.0.0.1 at 2017-10-18 13:43:42 +0800
+Processing by LikesController#update as HTML
+  Parameters: {"authenticity_token"=>"Ar9sLwKJ23L0Ndi2nBOaaFDFxIiAjJ/LuqYqN/dbol1IKrNEaoZGubQvYf/pJT7cf63q4iUJNlKROHPi7Rp/vA==", "photo_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/models/photo.rb:14:in `unlike'
+app/controllers/likes_controller.rb:19:in `update'
+Started PUT "/photos/1/likes/1" for 127.0.0.1 at 2017-10-18 13:43:55 +0800
+Processing by LikesController#update as HTML
+  Parameters: {"authenticity_token"=>"Ar9sLwKJ23L0Ndi2nBOaaFDFxIiAjJ/LuqYqN/dbol1IKrNEaoZGubQvYf/pJT7cf63q4iUJNlKROHPi7Rp/vA==", "photo_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#update, rendering head :no_content
+Completed 204 No Content in 157ms (ActiveRecord: 11.9ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:44:01 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.0ms)
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 122ms (Views: 116.0ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/photos/1/likes/1" for 127.0.0.1 at 2017-10-18 13:44:05 +0800
+Processing by LikesController#update as HTML
+  Parameters: {"authenticity_token"=>"Sm3Dyc4p+pOGbuYVPUyKYKvY8ujmfjhCjkvAfTtnZrUA+ByipiZnWMZ0X1xIei7UhLDcgkP7kdul1ZmoISa7VA==", "photo_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#update, rendering head :no_content
+Completed 204 No Content in 95ms (ActiveRecord: 1.4ms)
+
+
+Started PUT "/photos/1/likes/1" for 127.0.0.1 at 2017-10-18 13:44:09 +0800
+Processing by LikesController#update as HTML
+  Parameters: {"authenticity_token"=>"Sm3Dyc4p+pOGbuYVPUyKYKvY8ujmfjhCjkvAfTtnZrUA+ByipiZnWMZ0X1xIei7UhLDcgkP7kdul1ZmoISa7VA==", "photo_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#update, rendering head :no_content
+Completed 204 No Content in 99ms (ActiveRecord: 1.4ms)
+
+
+Started PUT "/photos/1/likes/1" for 127.0.0.1 at 2017-10-18 13:44:10 +0800
+Processing by LikesController#update as HTML
+  Parameters: {"authenticity_token"=>"Sm3Dyc4p+pOGbuYVPUyKYKvY8ujmfjhCjkvAfTtnZrUA+ByipiZnWMZ0X1xIei7UhLDcgkP7kdul1ZmoISa7VA==", "photo_id"=>"1", "id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#update, rendering head :no_content
+Completed 204 No Content in 102ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:44:54 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 142ms (Views: 118.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 13:44:58 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"NCfgiSJL9nPoVLN/X29SD/5LGguuqSk5wDgK2abGJSF+sj/iSkRruKhOCjYqWfa70SM0YQssgKDrplMMvIf4wA==", "photo_id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass):
+  
+app/controllers/likes_controller.rb:5:in `create'
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 13:45:47 +0800
+Processing by PhotosController#index as HTML
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 197ms (Views: 179.9ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:45:50 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (5.6ms)
+  [1m[35m (12.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 130ms (Views: 112.1ms | ActiveRecord: 13.1ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 13:45:52 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"bcJ8dd84n/N68hMnTAlcGw8jOAzwezsdEkp9blzR4MsnV6MetzcCODroqm45P/ivIEsWZlX+koQ51CS7RpA9Kg==", "photo_id"=>"1"}
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass):
+  
+app/controllers/likes_controller.rb:6:in `create'
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:47:30 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.6ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 128ms (Views: 104.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 13:47:33 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"KsIWFiWI5kdEJ9YWrBXA6kbeH2CJhTsevtXXwhlQoaVgV8l9TYd7jAQ9b1/ZI2ReabYxCiwAkoeVS44XAxF8RA==", "photo_id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass):
+  
+app/controllers/likes_controller.rb:5:in `create'
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:48:21 +0800
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:48:22 +0800
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:48:30 +0800
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:48:34 +0800
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:48:41 +0800
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:48:54 +0800
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:49:00 +0800
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started PUT "/__web_console/repl_sessions/830651043adc971cb9550e034c6f0fc7" for 127.0.0.1 at 2017-10-18 13:49:21 +0800
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:50:20 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 121ms (Views: 99.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 13:50:32 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"+jcoI4tdLfsxmqbC5R9i+gy+6E9FcIoG1r4B4rzPMwmwovdI41KwMHGAH4uQKcZOI9bGJeD1I5/9IFg3po7u6A==", "photo_id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `like' for nil:NilClass):
+  
+app/controllers/likes_controller.rb:5:in `create'
+Started PUT "/__web_console/repl_sessions/695d5fca01d31f29aef5f717989cae3b" for 127.0.0.1 at 2017-10-18 13:50:35 +0800
+Started PUT "/__web_console/repl_sessions/695d5fca01d31f29aef5f717989cae3b" for 127.0.0.1 at 2017-10-18 13:50:38 +0800
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:51:58 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.9ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 135ms (Views: 108.7ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 13:52:02 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"4tpn3saPOmytTTmtopm5mxsJ+Q7OS2uipq8CweBEw5uoT7i1roCnp+1XgOTXrx0vNGHXZGvOwjuNMVsU+gUeeg==", "photo_id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#create, rendering head :no_content
+Completed 204 No Content in 152ms (ActiveRecord: 3.5ms)
+
+
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:53:18 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.9ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 175ms (Views: 146.5ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 13:53:21 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"/CGWyLgU6IHMvISOe3gwhMZ59sLBKfQwwyCqYYURf/q2tEmj0Bt1SoymPccOTpQw6RHYqGSsXanovvO0n1CiGw==", "photo_id"=>"1"}
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#create, rendering head :no_content
+Completed 204 No Content in 138ms (ActiveRecord: 2.0ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 13:55:05 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"/CGWyLgU6IHMvISOe3gwhMZ59sLBKfQwwyCqYYURf/q2tEmj0Bt1SoymPccOTpQw6RHYqGSsXanovvO0n1CiGw==", "photo_id"=>"1"}
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" IS NULL AND "likes"."photo_id" = $1 LIMIT $2[0m  [["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#create, rendering head :no_content
+Completed 204 No Content in 37643ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 13:57:40 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 13:57:40 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 103ms (Views: 99.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 13:57:44 +0800
+Processing by PhotosController#index as HTML
+Redirected to http://localhost:3000/
+Filter chain halted as :authenticate! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 13:57:44 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 81ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-10-18 13:57:48 +0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 117ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-10-18 13:57:54 +0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ja0z2ZETQ6gPifDSQxw+9trvhuQhW7yb22siQwMeA+3QPTf/8UfWQZppjYCrMytxdSNirVsFOL+rJ8q4jGGLtw==", "user"=>{"email"=>"qiannyqian@email.com", "password"=>"[FILTERED]"}, "commit"=>"Log me in!"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "qiannyqian@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 134ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 13:57:54 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (59.7ms)
+Completed 200 OK in 151ms (Views: 132.5ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/photos/4" for 127.0.0.1 at 2017-10-18 13:57:58 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.4ms)
+  [1m[35m (16.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  Rendered photos/show.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 104ms (Views: 76.3ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/photos/4/likes" for 127.0.0.1 at 2017-10-18 13:58:01 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"AwTpf0sSe4Qh0bmeFNl3YqOQH4xp0vJ9oZgl/XhbPBFJkTYUIx3mT2HLANdh79PWjPgx5sxXW+SKBnwoYhrh8A==", "photo_id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 1], ["photo_id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "photo_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["photo_id", 4], ["created_at", "2017-10-18 05:58:01.053835"], ["updated_at", "2017-10-18 05:58:01.053835"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#create, rendering head :no_content
+Completed 204 No Content in 122ms (ActiveRecord: 6.4ms)
+
+
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/photos/4" for 127.0.0.1 at 2017-10-18 13:59:48 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.2ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  Rendered photos/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 149ms (Views: 98.7ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/photos/4" for 127.0.0.1 at 2017-10-18 13:59:55 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  Rendered photos/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 87ms (Views: 79.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 14:00:00 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 119ms (Views: 99.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 14:00:01 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.2ms)
+  [1m[35m (17.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 115ms (Views: 91.8ms | ActiveRecord: 18.0ms)
+
+
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 14:00:03 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"qv2Smg7t5LWTzFgqnq3XQdFbq1TMoyllZGJsK94MB+DgaE3xZuJ5ftPW4WPrm3P1/jOFPmkmgPxP/DX+xE3aAQ==", "photo_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 1], ["photo_id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "photo_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["photo_id", 1], ["created_at", "2017-10-18 06:00:03.479090"], ["updated_at", "2017-10-18 06:00:03.479090"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 6.3ms)
+
+
+  
+NoMethodError (undefined method `+' for nil:NilClass):
+  
+app/models/photo.rb:11:in `like'
+app/controllers/likes_controller.rb:5:in `create'
+Started POST "/photos/1/likes" for 127.0.0.1 at 2017-10-18 14:00:12 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"qv2Smg7t5LWTzFgqnq3XQdFbq1TMoyllZGJsK94MB+DgaE3xZuJ5ftPW4WPrm3P1/jOFPmkmgPxP/DX+xE3aAQ==", "photo_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 1], ["photo_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#create, rendering head :no_content
+Completed 204 No Content in 175ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 14:00:15 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.6ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 95ms (Views: 89.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 14:00:20 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 111ms (Views: 93.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/photos/2" for 127.0.0.1 at 2017-10-18 14:00:23 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  Rendered photos/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 92ms (Views: 84.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/photos/2/likes" for 127.0.0.1 at 2017-10-18 14:00:25 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"3KxGc0huQoHr+i0cN9kAVOJ7dY45c+XuR0qUHqOftEOWOZkYIGHfSqvglFVC76TgzRNb5Jz2THds1M3Lud5pog==", "photo_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 1], ["photo_id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "photo_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["photo_id", 2], ["created_at", "2017-10-18 06:00:25.240552"], ["updated_at", "2017-10-18 06:00:25.240552"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#create, rendering head :no_content
+Completed 204 No Content in 103ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/photos/2" for 127.0.0.1 at 2017-10-18 14:00:27 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.7ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  Rendered photos/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/sessions" for 127.0.0.1 at 2017-10-18 14:00:32 +0800
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z6yBaHchuJLQULGlQGShaf0GYW+9iuEalc7EXOsZ5taFOV4DHy4lWZBKCOw1UgXd0m5PBRgPSIO+UJ2J8Vg7Nw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-18 14:00:32 +0800
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-10-18 14:00:33 +0800
+Started GET "/auth/facebook" for 127.0.0.1 at 2017-10-18 14:00:34 +0800
+Started GET "/auth/facebook/callback?code=AQBlDpKm0QPsCP9C0ezpfzVTlY2I6-44xLcjqokUjJuLSk1Wo2TkZiX9sG2dRWQcDDNAmTFniLskoFPxGYKIEYsI8UU6X2B4O_URpRoCibIbABvBkrxIEaPKpfwMO2AL3NmZfBhXlKOe4I7DzCTbdBW7y_d9mKTECaB7Qjy_X7JD2x5Lpm864QVX9Fy4TXJbtPiPJ5lmX5MAr0Aca9GJDQFQuVHfs3qL2fh7SQmWnltcMWdfDxiQC1hWGFOPkaG83D-u84kVFLwwHsOWaUraNS50XARrkweCiCOcENi82LLNjbrSQIBCGPHjiB-8_up7eWuB2xaj2X6guvwy8FcrKpzk91a3fr3VFPduCb6z72XvYg&state=b461eeeeba5f391b0e78e3071e625189045fb7cee4c5e6e3" for 127.0.0.1 at 2017-10-18 14:00:34 +0800
+Processing by SessionsController#create_from_omniauth as HTML
+  Parameters: {"code"=>"AQBlDpKm0QPsCP9C0ezpfzVTlY2I6-44xLcjqokUjJuLSk1Wo2TkZiX9sG2dRWQcDDNAmTFniLskoFPxGYKIEYsI8UU6X2B4O_URpRoCibIbABvBkrxIEaPKpfwMO2AL3NmZfBhXlKOe4I7DzCTbdBW7y_d9mKTECaB7Qjy_X7JD2x5Lpm864QVX9Fy4TXJbtPiPJ5lmX5MAr0Aca9GJDQFQuVHfs3qL2fh7SQmWnltcMWdfDxiQC1hWGFOPkaG83D-u84kVFLwwHsOWaUraNS50XARrkweCiCOcENi82LLNjbrSQIBCGPHjiB-8_up7eWuB2xaj2X6guvwy8FcrKpzk91a3fr3VFPduCb6z72XvYg", "state"=>"b461eeeeba5f391b0e78e3071e625189045fb7cee4c5e6e3", "provider"=>"facebook"}
+  [1m[36mAuthentication Load (0.7ms)[0m  [1m[34mSELECT  "authentications".* FROM "authentications" WHERE "authentications"."provider" = $1 AND "authentications"."uid" = $2 LIMIT $3[0m  [["provider", "facebook"], ["uid", "1713704285306962"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "authentications" SET "token" = $1, "updated_at" = $2 WHERE "authentications"."id" = $3[0m  [["token", "EAAB0TjkfbZAoBAFBNBQ5Gtj5gMUmiIkBmLYKxZBMZAL5nYCAoBzRxDXLu5niIBQKpYhhaDfPmVxqQ2X1QdCZA65uvzIxQEqLxhDyVErxHrZBvrmqU2QcdI8rguqjcfVEfxZCp10c4i8pgE1xsUrPL4uD2KEZB8DrduBmRuYnxbL6wZDZD"], ["updated_at", "2017-10-18 06:00:34.874170"], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos
+Completed 302 Found in 29ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 14:00:34 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 130ms (Views: 120.3ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/photos/2" for 127.0.0.1 at 2017-10-18 14:00:37 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  Rendered photos/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 114ms (Views: 103.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/photos/2/likes" for 127.0.0.1 at 2017-10-18 14:00:38 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"RX+w6mUHIiG9kO+jRZc2cZorWadlZVJZxS0HSB67p6sP6m+BDQi/6v2KVuowoZLFtUN3zcDg+8Dus16dBPp6Sg==", "photo_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 3], ["photo_id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "photo_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["photo_id", 2], ["created_at", "2017-10-18 06:00:38.957174"], ["updated_at", "2017-10-18 06:00:38.957174"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for LikesController#create, rendering head :no_content
+Completed 204 No Content in 105ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/photos/2" for 127.0.0.1 at 2017-10-18 14:00:40 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  Rendered photos/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 76ms (Views: 70.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 14:00:43 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 100ms (Views: 92.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 14:01:36 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 138ms (Views: 128.0ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 14:01:38 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (2.6ms)
+  [1m[35m (26.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 152ms (Views: 118.2ms | ActiveRecord: 27.1ms)
+
+
+Started GET "/photos/1" for 127.0.0.1 at 2017-10-18 14:02:38 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.9ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  Rendered photos/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 154ms (Views: 111.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 14:02:42 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 111ms (Views: 97.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/photos/6" for 127.0.0.1 at 2017-10-18 14:02:44 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.2ms)
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  Rendered photos/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 118ms (Views: 95.3ms | ActiveRecord: 16.8ms)
+
+
+Started POST "/photos/6/likes" for 127.0.0.1 at 2017-10-18 14:02:46 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"TLIkGFVuAHQZRsTMUMpXHPaIsP0kA3ixqREoKdU5fhoGJ/tzPWGdv1lcfYUl/POo2eCel4GG0SiCj3H8z3ij+w==", "photo_id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 3], ["photo_id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "photo_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["photo_id", 6], ["created_at", "2017-10-18 06:02:46.430026"], ["updated_at", "2017-10-18 06:02:46.430026"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"photos", :photo_id=>"6"}, missing required keys: [:id]):
+  
+app/controllers/likes_controller.rb:6:in `create'
+Started GET "/photos/6" for 127.0.0.1 at 2017-10-18 14:03:08 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  Rendered photos/show.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 191ms (Views: 123.1ms | ActiveRecord: 13.7ms)
+
+
+Started POST "/photos/6/likes" for 127.0.0.1 at 2017-10-18 14:03:11 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"BTDU/CGrleCGkYGzetkVOGIVKEmWpRAuoxktibmx8eNPpQuXSaQIK8aLOPoP77GMTX0GIzMgubeIh3Rco/AsAg==", "photo_id"=>"6"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 3], ["photo_id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/6
+Completed 302 Found in 26ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/photos/6" for 127.0.0.1 at 2017-10-18 14:03:11 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  Rendered photos/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 83ms (Views: 77.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/photos" for 127.0.0.1 at 2017-10-18 14:03:16 +0800
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 2]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 4]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 6]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered photos/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 140ms (Views: 117.9ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/photos/3" for 127.0.0.1 at 2017-10-18 14:03:19 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.2ms)
+  [1m[35m (15.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  Rendered photos/show.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 122ms (Views: 99.6ms | ActiveRecord: 16.2ms)
+
+
+Started POST "/photos/3/likes" for 127.0.0.1 at 2017-10-18 14:03:20 +0800
+Processing by LikesController#create as HTML
+  Parameters: {"authenticity_token"=>"mdy8pzg71+2QJUmG0mWy/UW4eORVZR2dBcZ2kPEAj03TSWPMUDRKJtA/8M+nUxZJatBWjvDgtAQuWC9F60FSrA==", "photo_id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" IS NULL LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mLike Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."user_id" = $1 AND "likes"."photo_id" = $2 LIMIT $3[0m  [["user_id", 3], ["photo_id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "photo_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["photo_id", 3], ["created_at", "2017-10-18 06:03:20.965945"], ["updated_at", "2017-10-18 06:03:20.965945"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/photos/3
+Completed 302 Found in 19ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/photos/3" for 127.0.0.1 at 2017-10-18 14:03:20 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.8ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.8ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 3]]
+  Rendered photos/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 78ms (Views: 70.0ms | ActiveRecord: 2.3ms)
+
+
