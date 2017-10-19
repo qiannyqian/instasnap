@@ -3,7 +3,7 @@
     <div class="signin-form">
       <%= form_for(:user, url: sessions_path, method: :post) do |f| %>
         <h1 class="text-center">Sign In</h1>
-
+        <br>
         <div class="form-group">
           <h4><%= f.label :email_field, "Email", class: '' %></h4>
           <%= f.email_field :email, required: true, id: "user_email_field", class: "form-control" %>
@@ -22,6 +22,9 @@
 
 
     <h5 class="text-center">
+      <%= link_to image_tag('https://i.stack.imgur.com/Vk9SO.png'), "/auth/facebook" %>
+      <br>
+      <br>
       <%= link_to "I don't have an account", new_user_path, class: '' %>
     </h5>
 

@@ -3,7 +3,7 @@
     <div class="new-photo">
       <%= form_for(:photo, :html => {:multipart => true} ,url: photos_path, method: :post) do |f| %>
         <h1 class="text-center">Post new photo</h1>
-
+        <br>
         <div class="form-group">
           <%= f.hidden_field :user_id, value: current_user.id %>
         </div>
@@ -21,7 +21,7 @@
         <div class="form-group text-center">
           <%= f.submit "Post new photo", class: 'btn btn-primary btn-lg' %>
         </div>
-      <% end %>      
+      <% end %>
     </div>
 
     <h5 class= "text-center">

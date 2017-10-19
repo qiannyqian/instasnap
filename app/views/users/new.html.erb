@@ -1,9 +1,9 @@
 <section class="users new">
   <div class="content">
-    <div class="signup-form">
+    <div class="new-signup-form">
       <%= form_for(:user, url: users_path, method: :post) do |f| %>
         <h1 class="text-center">Sign Up</h1>
-
+        <br>
         <div class="form-group">
           <h4><%= f.label :email_field, "Email", class: '' %></h4>
           <%= f.email_field :email, required: true, id: "user_email_field", class: "form-control" %>
@@ -27,6 +27,8 @@
     <% end %>
 
     <h5 class="text-center">
+      <%= link_to image_tag('https://i.stack.imgur.com/Vk9SO.png'), "/auth/facebook" %>
+      <br><br>
       <%= link_to "Return home", root_path, class: '' %>
     </h5>
   </div>

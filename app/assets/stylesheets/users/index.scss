@@ -1,5 +1,4 @@
-.content {
-  padding: 50px;
+.search-page {
   background-image: url('https://images.unsplash.com/photo-1482242248426-c4e9fe3a559a?dpr=1&auto=compress,format&fit=crop&w=1350&h=&q=80&cs=tinysrgb&crop=');
   background-size: cover;
   height: 100vh;
@@ -7,7 +6,15 @@
   text-align: center;
 }
 
-.new-signup-form {
+.search-users {
   width: 400px;
   margin: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.search-btn {
+  font-size: 12px;
 }
