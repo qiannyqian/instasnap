@@ -18,13 +18,12 @@
           <% if current_user %>
             <li><%= link_to "#{current_user.username}", user_path(current_user) %></li>
             <li><%= link_to "New Photo", new_photo_path %></li>
+            <li><%= link_to "Search Users", users_path, class: '' %></li>
             <li><%= link_to "Logout", "/sessions", class: '', method: :delete %></li>
           <% else %>
             <li><%= link_to "Sign Up", new_user_path, class: '' %></li>
             <li><%= link_to "Login", new_sessions_path, class: '' %></li>
           <% end %>
-          <li><%= link_to "Search Users", users_path, class: '' %></li>
-
         </ul>
       </div>
     </div>

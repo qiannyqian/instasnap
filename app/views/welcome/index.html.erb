@@ -4,30 +4,32 @@
   </div>
 
   <div class="main-content">
-    <div class="signup-form">
-      <p>Sign up for an account today!</p>
-      <%= link_to "Signup", new_user_path %>
-      <br>
-      <br>
-      <div class="fb-login">
-        <%= link_to image_tag('https://i.stack.imgur.com/Vk9SO.png'), "/auth/facebook" %>
-      </div>
-    </div>
 
+    <% if current_user%>
     <div class="all-photos">
       <p>Browse all photos</p>
       <%= link_to "All Photos", photos_path %>
     </div>
 
-    <% if current_user%>
     <div class="buy-boost">
       <i class="fa fa-star" aria-hidden="true"></i>
       <%= link_to "Buy Boost", braintree_new_path %>
       <i class="fa fa-star" aria-hidden="true"></i>
       <p>If you're looking to boost your profile, you can buy lifetime access for only $10!</p>
     </div>
-    <% end %>
 
+    <% else %>
+    <div class="signup-form">
+      <h4><%= link_to "Sign up for an account today!", new_user_path %></h4>
+      <p>OR</p>
+      <h4><%= link_to "Login to your account", new_sessions_path, class: '' %></h4>
+      <br>
+      <div class="fb-login">
+        <%= link_to image_tag('https://i.stack.imgur.com/Vk9SO.png'), "/auth/facebook" %>
+      </div>
+    </div>
+
+    <% end %>
 
   </div>
 </div>
