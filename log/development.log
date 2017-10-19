@@ -18325,3 +18325,79 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 178ms (Views: 172.0ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-10-19 14:38:07 +0800
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (56.2ms)
+  Rendered layouts/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 920ms (Views: 890.7ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-10-19 14:38:14 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (0.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 238ms (Views: 143.4ms | ActiveRecord: 45.4ms)
+
+
+Started GET "/photos/5" for 127.0.0.1 at 2017-10-19 14:38:16 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.7ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 5]]
+  Rendered likes/_counter.html.erb (15.0ms)
+  Rendered photos/show.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+Completed 200 OK in 157ms (Views: 145.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-10-19 14:38:25 +0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPhoto Load (29.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos" WHERE "photos"."user_id" = $1[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (35.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 165ms (Views: 119.3ms | ActiveRecord: 30.6ms)
+
+
+Started GET "/photos/7" for 127.0.0.1 at 2017-10-19 14:39:38 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (0.9ms)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 7]]
+  Rendered likes/_counter.html.erb (2.6ms)
+  Rendered photos/show.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_flash_messages.html.erb (0.7ms)
+Completed 200 OK in 3669ms (Views: 3660.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/photos/7" for 127.0.0.1 at 2017-10-19 14:40:03 +0800
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered likes/_create.html.erb (1.5ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "likes" WHERE "likes"."photo_id" = $1[0m  [["photo_id", 7]]
+  Rendered likes/_counter.html.erb (3.3ms)
+  Rendered photos/show.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_flash_messages.html.erb (1.1ms)
+Completed 200 OK in 4709ms (Views: 4701.6ms | ActiveRecord: 1.6ms)
+
+
