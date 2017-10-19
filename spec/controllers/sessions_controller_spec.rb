@@ -9,4 +9,10 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 
+  describe "destroy" do
+    it "should log user out" do
+      ## Write test here
+    end
+  end
+
 end

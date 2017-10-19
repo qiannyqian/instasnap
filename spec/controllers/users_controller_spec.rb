@@ -9,4 +9,11 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 
+  describe "index" do
+    it "should render user search" do
+      get :index
+      expect(subject).to render_template(:index)
+    end
+  end
+
 end
