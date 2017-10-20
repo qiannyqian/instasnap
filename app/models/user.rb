@@ -30,4 +30,8 @@ class User < ApplicationRecord
     where("username ILIKE ?", "%#{search}%")
   end
 
+  def initials
+    self.username.scan(/(\b[a-zA-Z])[a-zA-Z]* ?/).join
+  end
+
 end
